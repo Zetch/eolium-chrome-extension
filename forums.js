@@ -5,10 +5,10 @@ function setFilter(keyword, rows) {
 
   // Check rows
   Array.prototype.forEach.call(rows, function(row) {
-    var threadLink = row.querySelector('dl > dt > a');
+    var threadLink = row.querySelector('dl > dt > a.topictitle');
     // Check link exists
     if (threadLink) {
-      var title = sanitizeText(threadLink.text);
+      var title = sanitizeText(threadLink.getAttribute('title'));
       // Check link text doesn't contain keyword, then hide row
       if (title.search(keywd) < 0) {
         // Avoid to add the same class twice or more
