@@ -1,5 +1,5 @@
-# EOLium Chrome Extensions
-## for ElOtroLado.net forums
+# EOLium para Google Chrome
+Extension que añade algunas mejoras y aspectos visuales en los foros de ElOtroLado.net
 
 ### 0.2
 * Nueva página de opciones con guardado de preferencias
