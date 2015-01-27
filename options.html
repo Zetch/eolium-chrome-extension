@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>EOLium Preferencias</title>
+  <link rel="stylesheet" href="styles/options.css">
+</head>
+
+<body>
+  <div class="header">
+    <div class="container">
+      <img class="logo" src="images/icon48.png" alt="EOLium">
+      <h1>EOLium</h1>
+    </div>
+  </div>
+  <div class="subheader">
+    <div class="container">
+      <h2>Preferences</h2>
+    </div>
+  </div>
+
+  <div class="container form">
+    <h4>Zona de Usuario</h4>
+    <div class="option">
+      <input type="checkbox" id="eolium_userZone_compactMode">
+      <label for="eolium_userZone_compactMode">Modo compacto</label>
+      <p class="help">El Panel de Control de usuario se mostrará mas pequeño y como una lista</p>
+    </div>
+
+    <h4>Foros</h4>
+    <div class="option">
+      <input type="checkbox" id="eolium_forums_hideRead">
+      <label for="eolium_forums_hideRead">Siempre ocultar leídos</label>
+      <p class="help">Define el estado por defecto del botón al cargar la página</p>
+    </div>
+    <div class="option">
+      <input type="checkbox" id="eolium_forums_hideClosed">
+      <label for="eolium_forums_hideClosed">Siempre ocultar cerrados</label>
+      <p class="help">Define el estado por defecto del botón al cargar la página</p>
+    </div>
+    <div class="option">
+      <input type="checkbox" id="eolium_forums_hideArchived">
+      <label for="eolium_forums_hideArchived">Siempre ocultar archivados</label>
+      <p class="help">Define el estado por defecto del botón al cargar la página</p>
+    </div>
+
+    <h4>Threads</h4>
+    <div class="option">
+      <input type="checkbox" id="eolium_threads_compactMode">
+      <label for="eolium_threads_compactMode">Mantener el Modo Compacto</label>
+      <p class="help">Define el estado por defecto del botón al cargar la página</p>
+    </div>
+    <div class="option">
+      <input type="checkbox" id="eolium_threads_hideImages">
+      <label for="eolium_threads_hideImages">Siempre ocultar imágenes</label>
+      <p class="help">Define el estado por defecto del botón al cargar la página</p>
+    </div>
+
+    <h4>Otros</h4>
+    <div class="option">
+      <input type="checkbox" id="eolium_other_hideRules">
+      <label for="eolium_other_hideRules">Ocultar reglas</label>
+      <p class="help">Esconde el banner superior con las reglas de uso de algunos subforos</p>
+    </div>
+  </div>
+
+  <div class="actions container">
+    <span id="status"></span>
+    <button id="savePreferences" href="#">Guardar</button>
+  </div>
+
+  <script src="js/options.js"></script>  
+</body>
+</html>
