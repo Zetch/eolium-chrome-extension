@@ -5,6 +5,7 @@
 * Nueva página de opciones con guardado de preferencias
 * Los filtros en foros e hilos pueden mantener su estado
 * Ocultación de banner superior de reglas
+* La tecla 'ESC' reestablece el filtro de texto
 * Corrección de bugs
 
 ### 0.1
