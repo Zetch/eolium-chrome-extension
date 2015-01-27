@@ -2,13 +2,15 @@
   "manifest_version": 2,
   "name": "EOLium",
   "description": "Enable new features on ElOtroLado.net forums like live filtering, hide read threads or compact mode",
-  "version": "0.1",
+  "version": "0.1.1",
   "author": "Nauzet Hernandez", // (nauzethc@gmail.com)
 
   "icons": {
     "48":  "images/icon48.png",
     "128": "images/icon128.png"
   },
+
+  "options_page": "options.html",
 
   "page_action": {
     "default_icon": {
@@ -21,33 +23,34 @@
   "permissions": [
     "declarativeContent",
     "tabs",
-    "http://www.elotrolado.net/"
+    "http://www.elotrolado.net/",
+    "storage"
   ],
 
   "background": {
-    "scripts": ["background.js"],
+    "scripts": ["js/background.js"],
     "persistent": false
   },
 
   "content_scripts": [
     {
       "matches": ["http://www.elotrolado.net/*"],
-      "js": ["common.js"]
+      "js": ["js/common.js", "js/global.js"]
     },
     {
       "matches": ["http://www.elotrolado.net/*"],
-      "js": ["navigation.js", "userzone.js"],
-      "css": ["navigation.css", "userzone.css"]
+      "js": ["js/navigation.js", "js/userzone.js"],
+      "css": ["styles/navigation.css", "styles/userzone.css"]
     },
     {
       "matches": ["http://www.elotrolado.net/foro_*"],
-      "js": ["forums.js"],
-      "css": ["forums.css"]
+      "js": ["js/forums.js"],
+      "css": ["styles/forums.css"]
     },
     {
       "matches": ["http://www.elotrolado.net/hilo_*"],
-      "js": ["threads.js"],
-      "css": ["threads.css"]
+      "js": ["js/threads.js"],
+      "css": ["styles/threads.css"]
     }
   ]
 }
