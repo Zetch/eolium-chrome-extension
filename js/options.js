@@ -1,19 +1,25 @@
 
 var preferences = {
+  // Header
+  'eolium_header_compactMode':       false,
+
   // User Panel
-  'eolium_userZone_compactMode': true,
+  'eolium_userZone_compactMode':     true,
 
   // Forums
-  'eolium_forums_hideRead':      false,
-  'eolium_forums_hideClosed':    false,
-  'eolium_forums_hideArchived':  false,
+  'eolium_forums_hideRead':          false,
+  'eolium_forums_hideClosed':        false,
+  'eolium_forums_hideArchived':      false,
 
   // Threads
-  'eolium_threads_compactMode':  false,
-  'eolium_threads_hideImages':   false,
+  'eolium_threads_compactMode':      false,
+  'eolium_threads_hideImages':       false,
 
   // Other
-  'eolium_other_hideRules':      false
+  'eolium_other_hideForumTitle':     false,
+  'eolium_other_hideRelatedWikis':   false,
+  'eolium_other_hideGlobalAnnouces': false,
+  'eolium_other_hideRules':          false
 };
 
 
