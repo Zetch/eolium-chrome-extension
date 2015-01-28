@@ -11,7 +11,9 @@ chrome.storage.local.get({
   var preferences = items;
 
   // Hide main title in forums
-  if (preferences['eolium_other_hideForumTitle']) {
+  if (window.location.pathname.match(/^\/foro_/) &&
+      preferences['eolium_other_hideForumTitle']) {
+        
     var title = document.querySelector('#forum-wrap > h1');
     if (title) {
       title.remove();
