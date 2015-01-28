@@ -3,7 +3,7 @@
   bottom: 10px;
 }
 
-#h-ucp.compact #u-meta {
+#h-ucp.compact > #u-meta {
   display: none;
 }
 
