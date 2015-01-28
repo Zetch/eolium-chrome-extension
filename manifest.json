@@ -35,12 +35,18 @@
   "content_scripts": [
     {
       "matches": ["http://www.elotrolado.net/*"],
-      "js": ["js/common.js", "js/global.js"]
-    },
-    {
-      "matches": ["http://www.elotrolado.net/*"],
-      "js": ["js/navigation.js", "js/userzone.js"],
-      "css": ["styles/navigation.css", "styles/userzone.css"]
+      "js": [
+        "js/common.js",
+        "js/global.js",
+        "js/navigation.js",
+        "js/userzone.js",
+        "js/header.js"
+      ],
+      "css": [
+        "styles/navigation.css",
+        "styles/userzone.css",
+        "styles/header.css"
+      ]
     },
     {
       "matches": ["http://www.elotrolado.net/foro_*"],
