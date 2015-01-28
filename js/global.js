@@ -16,6 +16,13 @@ chrome.storage.local.get({
     if (title) {
       title.remove();
     }
+    try {
+      document.querySelector('#forum-wrap > h2.breadcrumbs').style.float = 'left';
+      document.querySelector('#forum-wrap > ul.linklist').style.float = 'right';
+      document.querySelector('#forum-wrap > .clear').remove();
+    } catch (err) {
+
+    }
   }
 
   // Hide related wikis
