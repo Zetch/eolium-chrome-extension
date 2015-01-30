@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "EOLium",
   "description": "Enable new features on ElOtroLado.net forums like live filtering, hide read threads or compact mode",
-  "version": "0.3",
+  "version": "0.4",
   "author": "Nauzet Hernandez", // (nauzethc@gmail.com)
 
   "icons": {
