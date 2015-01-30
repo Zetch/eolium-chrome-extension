@@ -6,7 +6,7 @@
 #menu a {
   font-size: 13px !important;
 }
-#menu a span {
+#menu a span, .popup-navigation a span {
   display: inline-block;
   vertical-align: middle;
   width: 7px;
@@ -18,10 +18,10 @@
 #menu a.ltr span {
   margin-right: 5px;
 }
-#menu a.rtl span {
+#menu a.rtl span, .popup-navigation a span {
   margin-left: 5px;
 }
-#menu a span.active {
+#menu a span.active, .popup-navigation a span.active {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -81,6 +81,15 @@
   font-family: Oswald, sans-serif;
   font-size: 15px;
   color: #555 !important;
+}
+.popup-navigation .submenu {
+  display: none;
+  background-color: #eee;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.popup-navigation .submenu.show {
+  display: block;
 }
 .popup-navigation a:hover {
   color: #ff7f00 !important;

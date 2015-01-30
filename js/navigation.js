@@ -42,6 +42,13 @@ function togglePopup(event) {
   }
 }
 
+function toggleSubmenu(event) {
+  event.preventDefault();
+  var link = this;
+  link.classList.toggle('active');
+  var submenu = link.nextSibling;
+  submenu.classList.toggle('show');
+}
 
 var navigation = {
   'xbone': {
@@ -122,13 +129,36 @@ var navigation = {
       ['Multiplataforma', '/foro_otras-consolas-multiplataforma_22'],
       ['Wii', 
         [
-          'General',        '/foro_wii-general_148',
-          'Juegos',         '/foro_wii-juegos_155',
-          'Online',         '/foro_wii-online_156',
-          'Scene',          '/foro_wii-scene_165',
-          'Modchips',       '/foro_wii-modchips_158',
-          'Softmods',       '/foro_wii-softmods_170',
-          'Parches',        '/foro_wii-parches-y-grabacion_171'
+          ['General',        '/foro_wii-general_148',],
+          ['Juegos',         '/foro_wii-juegos_155',],
+          ['Online',         '/foro_wii-online_156',],
+          ['Scene',          '/foro_wii-scene_165',],
+          ['Modchips',       '/foro_wii-modchips_158',],
+          ['Softmods',       '/foro_wii-softmods_170',],
+          ['Parches',        '/foro_wii-parches-y-grabacion_171']
+        ]
+      ],
+      ['PSP',
+        [
+          ['General', ''],
+          ['Juegos',  ''],
+          ['Scene',   ''],
+          ['Firmwares y Modchips', ''],
+          ['Backups', '']
+        ]
+      ],
+      ['Nintendo DS',
+        [
+          ['General', ''],
+          ['Juegos',  ''],
+          ['Flash Carts', ''],
+          ['Scene', ''],
+          ['Backups', '']
+        ]
+      ],
+      ['PlayStation 2',
+        [
+          ['General', '']
         ]
       ]
     ]
@@ -197,6 +227,68 @@ for (name in navigation) {
       nav.addEventListener('click', togglePopup);
       popup.addEventListener('blur', closePopup);
 
+      contentWrap.appendChild(popup);
+
+    } else {
+      nav = document.createElement('a');
+      nav.textContent = navigation[name].title;
+      nav.setAttribute('name', name);
+      nav.setAttribute('id', 'menu-'+name);
+      var orientation = navigation[name].align;
+      nav.classList.add(orientation)
+
+      var arrow = document.createElement("span");
+      if (orientation === 'ltr') {
+        nav.insertBefore(arrow, nav.firstChild);
+      } else if (orientation === 'rtl') {
+        nav.appendChild(arrow);
+      }
+
+      // Create popup
+      var popup = document.createElement('div');
+      popup.setAttribute('id', 'popup-'+name);
+      popup.setAttribute('class', 'popup-navigation '+orientation);
+      popup.setAttribute('name', name);
+      popup.setAttribute('tabindex', '-1');
+
+      // Create links
+      Array.prototype.forEach.call(navigation[name].links, function(link) {
+        var anchor = document.createElement('a');
+        var submenu;
+
+        anchor.textContent = link[0];
+
+        if (typeof(link[1]) === 'string') {
+          anchor.setAttribute('href', link[1]);
+        } else {
+          // Add arrow to show is expandable
+          var arrow = document.createElement("span");
+          anchor.appendChild(arrow);
+
+          // Add submenu links
+          submenu = document.createElement("div");
+          submenu.classList.add('submenu');
+
+          var sublinks = link[1];
+          sublinks.forEach(function(sublink) {
+            var subanchor = document.createElement('a');
+            subanchor.textContent = sublink[0];
+            subanchor.setAttribute('href', sublink[1]);
+            submenu.appendChild(subanchor);
+          });
+
+          anchor.addEventListener('click', toggleSubmenu);
+        }
+
+        popup.appendChild(anchor);
+        if (submenu) popup.appendChild(submenu);
+      });
+
+      // Setup menu events
+      nav.addEventListener('click', togglePopup);
+      popup.addEventListener('blur', closePopup);
+
+      menu.appendChild(nav);
       contentWrap.appendChild(popup);
     }
   }
