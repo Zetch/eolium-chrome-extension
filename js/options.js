@@ -3,6 +3,9 @@ var preferences = {
   // Header
   'eolium_header_compactMode':       false,
 
+  // News
+  'eolium_news_singleRow':           false,
+
   // User Panel
   'eolium_userZone_compactMode':     true,
 
@@ -28,13 +31,15 @@ function savePreferences() {
   // Load values from form
   for (name in preferences) {
     var input = document.getElementById(name);
-    var value;
-    if (input.type === "checkbox") {
-      value = input.checked;
-    } else {
-      value = input.value;
+    if (input) {
+      var value;
+      if (input.type === "checkbox") {
+        value = input.checked;
+      } else {
+        value = input.value;
+      }
+      toSave[name] = value;
     }
-    toSave[name] = value;
   }
   // Save them to Chrome Storage
   chrome.storage.local.set(toSave, function() {
