@@ -49,6 +49,14 @@
       ]
     },
     {
+      "matches": [
+        "http://www.elotrolado.net/",
+        "http://www.elotrolado.net/noticias*"
+      ],
+      "js": ["js/news.js"],
+      "css": ["styles/news.css"]
+    },
+    {
       "matches": ["http://www.elotrolado.net/foro_*"],
       "js": ["js/forums.js"],
       "css": ["styles/forums.css"]
