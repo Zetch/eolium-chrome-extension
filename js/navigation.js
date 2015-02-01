@@ -5,8 +5,10 @@ function closePopup(event) {
   var menu = document.querySelector('#menu-'+popup.getAttribute('name'));
   if (!clickTarget ||
      (!clickTarget.parentNode.isSameNode(popup) &&
+      !clickTarget.parentNode.parentNode.isSameNode(popup) &&
       !clickTarget.isSameNode(menu) &&
-      !clickTarget.isSameNode(menu.querySelector('span')) ) ) {
+      !clickTarget.isSameNode(menu.querySelector('span')) &&
+      !clickTarget.isC) ) {
     popup.classList.remove('show');
     menu.querySelector('span').classList.remove('active');
   }
@@ -45,6 +47,14 @@ function togglePopup(event) {
 function toggleSubmenu(event) {
   event.preventDefault();
   var link = this;
+  if (!link.classList.contains('active')) {
+    // Remove active class and show other submenu
+    Array.prototype.forEach.call(link.parentNode.childNodes, function(node) {
+      node.classList.remove('show');   // Submenu nodes
+      node.classList.remove('active'); // Anchor nodes
+    });
+  }
+  // Active them on current menu and anchor
   link.classList.toggle('active');
   var submenu = link.nextSibling;
   submenu.classList.toggle('show');
@@ -82,24 +92,24 @@ var navigation = {
     'title': 'PlayStation 3',
     'align': 'ltr',
     'links': [
-      ['General',        '/foro_playstation-3-general_149'],
-      ['Juegos',         '/foro_playstation-3-juegos_161'],
-      ['Online',         '/foro_playstation-3-online_162'],
-      ['Scene',          '/foro_playstation-3-scene_163'],
-      ['Modchips/Softmods',       '/foro_playstation-3-modchips-y-softmods_179'],
-      ['Carga de Backups',        '/foro_playstation-3-carga-de-backups_180']
+      ['General',           '/foro_playstation-3-general_149'],
+      ['Juegos',            '/foro_playstation-3-juegos_161'],
+      ['Online',            '/foro_playstation-3-online_162'],
+      ['Scene',             '/foro_playstation-3-scene_163'],
+      ['Modchips/Softmods', '/foro_playstation-3-modchips-y-softmods_179'],
+      ['Carga de Backups',  '/foro_playstation-3-carga-de-backups_180']
     ]
   },
   '360': {
     'title': 'Xbox 360',
     'align': 'ltr',
     'links': [
-      ['General',        '/foro_xbox-360-general_129'],
-      ['Juegos',         '/foro_xbox-360-juegos_138'],
-      ['Online',         '/foro_xbox-360-online_142'],
-      ['Mod. de Lectores',       '/foro_xbox-360-modificacion-de-lectores_143'],
-      ['Grabación',      '/foro_xbox-360-grabacion_151'],
-      ['Exploits/Homebrew',       '/foro_xbox-360-exploits-y-homebrew_178']
+      ['General',           '/foro_xbox-360-general_129'],
+      ['Juegos',            '/foro_xbox-360-juegos_138'],
+      ['Online',            '/foro_xbox-360-online_142'],
+      ['Mod. de Lectores',  '/foro_xbox-360-modificacion-de-lectores_143'],
+      ['Grabación',         '/foro_xbox-360-grabacion_151'],
+      ['Exploits/Homebrew', '/foro_xbox-360-exploits-y-homebrew_178']
     ]
   },
   'vita': {
@@ -122,12 +132,12 @@ var navigation = {
       ['Scene',          '/foro_nintendo-3ds-scene_202']
     ]
   },
-  'other': {
+  'otras': {
     'title': 'Otras Consolas',
     'align': 'rtl',
     'links': [
       ['Multiplataforma', '/foro_otras-consolas-multiplataforma_22'],
-      ['Wii', 
+      ['Wii',
         [
           ['General',        '/foro_wii-general_148',],
           ['Juegos',         '/foro_wii-juegos_155',],
@@ -140,27 +150,85 @@ var navigation = {
       ],
       ['PSP',
         [
-          ['General', ''],
-          ['Juegos',  ''],
-          ['Scene',   ''],
-          ['Firmwares y Modchips', ''],
-          ['Backups', '']
+          ['General',            '/foro_psp-general_126'],
+          ['Juegos',             '/foro_psp-juegos_133'],
+          ['Scene',              '/foro_psp-scene_128'],
+          ['Firmwares/Modchips', '/foro_psp-firmwares-y-modchips_153'],
+          ['Backups',            '/foro_psp-carga-de-backups_134']
         ]
       ],
       ['Nintendo DS',
         [
-          ['General', ''],
-          ['Juegos',  ''],
-          ['Flash Carts', ''],
-          ['Scene', ''],
-          ['Backups', '']
+          ['General',     '/foro_nds-general_125'],
+          ['Juegos',      '/foro_nds-juegos_135'],
+          ['Flash Carts', '/foro_nds-flash-carts_150'],
+          ['Scene',       '/foro_nds-scene_130'],
+          ['Backups',     '/foro_nds-carga-de-backups_136']
         ]
       ],
       ['PlayStation 2',
         [
-          ['General', '']
+          ['General',          '/foro_playstation-2-general_16'],
+          ['Juegos',            '/foro_playstation-2-juegos_23'],
+          ['Online',            '/foro_playstation-2-online_103'],
+          ['Modchips',          '/foro_playstation-2-modchips_24'],
+          ['Cog-Swap',          '/foro_playstation-2-cog-swap_73'],
+          ['Parches/Grabación', '/foro_playstation-2-parches-y-grabacion_74'],
+          ['Scene',             '/foro_playstation-2-scene_124']
         ]
-      ]
+      ],
+      ['Xbox',         '/foro_otras-consolas-xbox_78'],
+      ['GameCube',     '/foro_otras-consolas-gamecube_85'],
+      ['Alternativas', '/foro_otras-consolas-consolas-alternativas_120'],
+      ['Clásicas',     '/foro_otras-consolas-consolas-clasicas_80']
+    ]
+  },
+  'more': {
+    'title': 'Más',
+    'align': 'rtl',
+    'links': [
+      ['Off-topic',
+        [
+          ['Miscelánea', 'http://www.elotrolado.net/foro_off-topic-miscelanea_11'],
+          ['El rincón de EOL', 'http://www.elotrolado.net/foro_off-topic-el-rincon-del-eoliano_67'],
+          ['Manganime/Cómics', 'http://www.elotrolado.net/foro_off-topic-manganime-y-comics_60'],
+          ['Literatura', 'http://www.elotrolado.net/foro_off-topic-literatura_61'],
+          ['Música', 'http://www.elotrolado.net/foro_off-topic-musica_115'],
+          ['Cine', 'http://www.elotrolado.net/foro_off-topic-cine_59'],
+          ['ex-Pruebas', 'http://www.elotrolado.net/foro_off-topic-ex-pruebas_21']
+        ]
+      ],
+      ['Compra-Venta',
+        [
+          ['Nueva Generación', 'http://www.elotrolado.net/foro_compra-venta-nueva-generacion_212'],
+          ['Actuales', 'http://www.elotrolado.net/foro_compra-venta-consolas-actuales_97'],
+          ['Modernas', 'http://www.elotrolado.net/foro_compra-venta-consolas-modernas_164'],
+          ['Clásicas', 'http://www.elotrolado.net/foro_compra-venta-consolas-clasicas_98'],
+          ['Informática', 'http://www.elotrolado.net/foro_compra-venta-informatica_99'],
+          ['Otros', 'http://www.elotrolado.net/foro_compra-venta-otros_100'],
+          ['Feedback', 'http://www.elotrolado.net/foro_compra-venta-feedback-cv_117']
+        ]
+      ],
+      ['Noticias',
+        [
+          ['El Buffer', 'http://www.elotrolado.net/foro_noticias-el-buffer_157'],
+          ['Consolas', 'http://www.elotrolado.net/foro_noticias-consolas_195'],
+          ['Juegos', 'http://www.elotrolado.net/foro_noticias-juegos_196'],
+          ['Scene', 'http://www.elotrolado.net/foro_noticias-scene_197'],
+          ['Tecnología', 'http://www.elotrolado.net/foro_noticias-tecnologia_33'],
+          ['Internet', 'http://www.elotrolado.net/foro_noticias-internet_90'],
+          ['Otros', 'http://www.elotrolado.net/foro_noticias-otros_30']
+        ]
+      ],
+      ['Feedback',
+        [
+          ['Políticas EOL', 'http://www.elotrolado.net/foro_feedback-politicas-de-eol_10'],
+          ['Cuestiones técnicas', 'http://www.elotrolado.net/foro_feedback-cuestiones-tecnicas_166'],
+          ['Wiki', 'http://www.elotrolado.net/foro_feedback-wiki_159'],
+          ['Compra-Venta', 'http://www.elotrolado.net/foro_compra-venta-feedback-cv_117']
+        ]
+      ],
+      ['Wiki', '/wiki/']
     ]
   },
   'pc': {
@@ -187,6 +255,13 @@ var navigation = {
 var contentWrap = document.querySelector("#content-wrap");
 var menu        = contentWrap.querySelector("#menu");
 
+// Remove 'other' and 'more' popups
+document.getElementById('popup-more').remove();
+document.getElementById('menu-more').querySelector('span').remove();
+document.getElementById('popup-otras').remove();
+document.getElementById('menu-otras').querySelector('span').remove();
+
+// Create navigation popups
 for (name in navigation) {
   if (navigation.hasOwnProperty(name)) {
 
@@ -198,37 +273,6 @@ for (name in navigation) {
       nav.setAttribute('name', name);
       var orientation = navigation[name].align
       nav.classList.add(orientation);
-
-      // Add arrow
-      var arrow = document.createElement("span");
-      if (orientation === 'ltr') {
-        nav.insertBefore(arrow, nav.firstChild);
-      } else if (orientation === 'rtl') {
-        nav.appendChild(arrow);
-      }
-
-      // Create popup
-      var popup = document.createElement('div');
-      popup.setAttribute('id', 'popup-'+name);
-      popup.setAttribute('class', 'popup-navigation '+orientation);
-      popup.setAttribute('name', name);
-      popup.setAttribute('tabindex', '-1');
-
-      // Create links
-      Array.prototype.forEach.call(navigation[name].links, function(url) {
-        var link = document.createElement('a');
-        link.setAttribute('href', url[1]);
-        link.textContent = url[0];
-        link.addEventListener('click', function(e) { e.stopPropagation(); });
-        popup.appendChild(link);
-      });
-
-      // Setup menu events
-      nav.addEventListener('click', togglePopup);
-      popup.addEventListener('blur', closePopup);
-
-      contentWrap.appendChild(popup);
-
     } else {
       nav = document.createElement('a');
       nav.textContent = navigation[name].title;
@@ -236,60 +280,65 @@ for (name in navigation) {
       nav.setAttribute('id', 'menu-'+name);
       var orientation = navigation[name].align;
       nav.classList.add(orientation)
+      menu.appendChild(nav);
+    }
 
-      var arrow = document.createElement("span");
-      if (orientation === 'ltr') {
-        nav.insertBefore(arrow, nav.firstChild);
-      } else if (orientation === 'rtl') {
-        nav.appendChild(arrow);
-      }
+    // Add arrow
+    var arrow = document.createElement("span");
+    if (orientation === 'ltr') {
+      nav.insertBefore(arrow, nav.firstChild);
+    } else if (orientation === 'rtl') {
+      nav.appendChild(arrow);
+    }
 
-      // Create popup
-      var popup = document.createElement('div');
-      popup.setAttribute('id', 'popup-'+name);
-      popup.setAttribute('class', 'popup-navigation '+orientation);
-      popup.setAttribute('name', name);
-      popup.setAttribute('tabindex', '-1');
+    // Create popup
+    var popup = document.createElement('div');
+    popup.setAttribute('id', 'popup-'+name);
+    popup.setAttribute('class', 'popup-navigation '+orientation);
+    popup.setAttribute('name', name);
+    popup.setAttribute('tabindex', '-1');
 
-      // Create links
-      Array.prototype.forEach.call(navigation[name].links, function(link) {
-        var anchor = document.createElement('a');
-        var submenu;
+    // Create links
+    Array.prototype.forEach.call(navigation[name].links, function(link) {
+      var anchor = document.createElement('a');
+      var submenu;
 
-        anchor.textContent = link[0];
+      anchor.textContent = link[0];
 
-        if (typeof(link[1]) === 'string') {
-          anchor.setAttribute('href', link[1]);
-        } else {
-          // Add arrow to show is expandable
-          var arrow = document.createElement("span");
+      if (typeof(link[1]) === 'string') {
+        anchor.setAttribute('href', link[1]);
+      } else {
+        // Add arrow to show is expandable
+        var arrow = document.createElement("span");
+        if (orientation === 'ltr') {
           anchor.appendChild(arrow);
-
-          // Add submenu links
-          submenu = document.createElement("div");
-          submenu.classList.add('submenu');
-
-          var sublinks = link[1];
-          sublinks.forEach(function(sublink) {
-            var subanchor = document.createElement('a');
-            subanchor.textContent = sublink[0];
-            subanchor.setAttribute('href', sublink[1]);
-            submenu.appendChild(subanchor);
-          });
-
-          anchor.addEventListener('click', toggleSubmenu);
+        } else if (orientation === 'rtl') {
+          anchor.insertBefore(arrow, anchor.firstChild);
         }
 
-        popup.appendChild(anchor);
-        if (submenu) popup.appendChild(submenu);
-      });
+        // Add submenu links
+        submenu = document.createElement("div");
+        submenu.classList.add('submenu');
 
-      // Setup menu events
-      nav.addEventListener('click', togglePopup);
-      popup.addEventListener('blur', closePopup);
+        var sublinks = link[1];
+        sublinks.forEach(function(sublink) {
+          var subanchor = document.createElement('a');
+          subanchor.textContent = sublink[0];
+          subanchor.setAttribute('href', sublink[1]);
+          submenu.appendChild(subanchor);
+        });
 
-      menu.appendChild(nav);
-      contentWrap.appendChild(popup);
-    }
+        anchor.addEventListener('click', toggleSubmenu);
+      }
+
+      popup.appendChild(anchor);
+      if (submenu) popup.appendChild(submenu);
+    });
+
+    // Setup menu events
+    nav.addEventListener('click', togglePopup);
+    popup.addEventListener('blur', closePopup);
+
+    contentWrap.appendChild(popup);
   }
 }
