@@ -1,6 +1,9 @@
 # EOLium para Google Chrome
 Extension que añade algunas mejoras y aspectos visuales en los foros de ElOtroLado.net
 
+### 0.5
+* Añadido sub-menus a los ménus desplegables
+
 ### 0.4
 * Modo horizontal para las noticias (una sola columna)
 
