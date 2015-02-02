@@ -189,43 +189,43 @@ var navigation = {
     'links': [
       ['Off-topic',
         [
-          ['Miscelánea', 'http://www.elotrolado.net/foro_off-topic-miscelanea_11'],
-          ['El rincón de EOL', 'http://www.elotrolado.net/foro_off-topic-el-rincon-del-eoliano_67'],
-          ['Manganime/Cómics', 'http://www.elotrolado.net/foro_off-topic-manganime-y-comics_60'],
-          ['Literatura', 'http://www.elotrolado.net/foro_off-topic-literatura_61'],
-          ['Música', 'http://www.elotrolado.net/foro_off-topic-musica_115'],
-          ['Cine', 'http://www.elotrolado.net/foro_off-topic-cine_59'],
-          ['ex-Pruebas', 'http://www.elotrolado.net/foro_off-topic-ex-pruebas_21']
+          ['Miscelánea',       '/foro_off-topic-miscelanea_11'],
+          ['El rincón de EOL', '/foro_off-topic-el-rincon-del-eoliano_67'],
+          ['Manganime/Cómics', '/foro_off-topic-manganime-y-comics_60'],
+          ['Literatura',       '/foro_off-topic-literatura_61'],
+          ['Música',           '/foro_off-topic-musica_115'],
+          ['Cine',             '/foro_off-topic-cine_59'],
+          ['ex-Pruebas',       '/foro_off-topic-ex-pruebas_21']
         ]
       ],
       ['Compra-Venta',
         [
-          ['Nueva Generación', 'http://www.elotrolado.net/foro_compra-venta-nueva-generacion_212'],
-          ['Actuales', 'http://www.elotrolado.net/foro_compra-venta-consolas-actuales_97'],
-          ['Modernas', 'http://www.elotrolado.net/foro_compra-venta-consolas-modernas_164'],
-          ['Clásicas', 'http://www.elotrolado.net/foro_compra-venta-consolas-clasicas_98'],
-          ['Informática', 'http://www.elotrolado.net/foro_compra-venta-informatica_99'],
-          ['Otros', 'http://www.elotrolado.net/foro_compra-venta-otros_100'],
-          ['Feedback', 'http://www.elotrolado.net/foro_compra-venta-feedback-cv_117']
+          ['Nueva Generación', '/foro_compra-venta-nueva-generacion_212'],
+          ['Actuales',         '/foro_compra-venta-consolas-actuales_97'],
+          ['Modernas',         '/foro_compra-venta-consolas-modernas_164'],
+          ['Clásicas',         '/foro_compra-venta-consolas-clasicas_98'],
+          ['Informática',      '/foro_compra-venta-informatica_99'],
+          ['Otros',            '/foro_compra-venta-otros_100'],
+          ['Feedback',         '/foro_compra-venta-feedback-cv_117']
         ]
       ],
       ['Noticias',
         [
-          ['El Buffer', 'http://www.elotrolado.net/foro_noticias-el-buffer_157'],
-          ['Consolas', 'http://www.elotrolado.net/foro_noticias-consolas_195'],
-          ['Juegos', 'http://www.elotrolado.net/foro_noticias-juegos_196'],
-          ['Scene', 'http://www.elotrolado.net/foro_noticias-scene_197'],
-          ['Tecnología', 'http://www.elotrolado.net/foro_noticias-tecnologia_33'],
-          ['Internet', 'http://www.elotrolado.net/foro_noticias-internet_90'],
-          ['Otros', 'http://www.elotrolado.net/foro_noticias-otros_30']
+          ['El Buffer',  '/foro_noticias-el-buffer_157'],
+          ['Consolas',   '/foro_noticias-consolas_195'],
+          ['Juegos',     '/foro_noticias-juegos_196'],
+          ['Scene',      '/foro_noticias-scene_197'],
+          ['Tecnología', '/foro_noticias-tecnologia_33'],
+          ['Internet',   '/foro_noticias-internet_90'],
+          ['Otros',      '/foro_noticias-otros_30']
         ]
       ],
       ['Feedback',
         [
-          ['Políticas EOL', 'http://www.elotrolado.net/foro_feedback-politicas-de-eol_10'],
-          ['Cuestiones técnicas', 'http://www.elotrolado.net/foro_feedback-cuestiones-tecnicas_166'],
-          ['Wiki', 'http://www.elotrolado.net/foro_feedback-wiki_159'],
-          ['Compra-Venta', 'http://www.elotrolado.net/foro_compra-venta-feedback-cv_117']
+          ['Políticas EOL',       '/foro_feedback-politicas-de-eol_10'],
+          ['Cuestiones técnicas', '/foro_feedback-cuestiones-tecnicas_166'],
+          ['Wiki',                '/foro_feedback-wiki_159'],
+          ['Compra-Venta',        '/foro_compra-venta-feedback-cv_117']
         ]
       ],
       ['Wiki', '/wiki/']
