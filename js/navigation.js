@@ -4,11 +4,10 @@ function closePopup(event) {
   var clickTarget = event.relatedTarget;
   var menu = document.querySelector('#menu-'+popup.getAttribute('name'));
   if (!clickTarget ||
-     (!clickTarget.parentNode.isSameNode(popup) &&
-      !clickTarget.parentNode.parentNode.isSameNode(popup) &&
-      !clickTarget.isSameNode(menu) &&
-      !clickTarget.isSameNode(menu.querySelector('span')) &&
-      !clickTarget.isC) ) {
+     (!(clickTarget.parentNode === popup) &&
+      !(clickTarget.parentNode.parentNode == popup) &&
+      !(clickTarget === menu) &&
+      !(clickTarget === menu.querySelector('span')) ) ) {
     popup.classList.remove('show');
     menu.querySelector('span').classList.remove('active');
   }
