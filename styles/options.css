@@ -52,6 +52,7 @@ button {
 
 .subheader h2 {
   float: left;
+  clear: both;
 }
 
 .form {
