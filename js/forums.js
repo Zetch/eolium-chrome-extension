@@ -58,6 +58,12 @@ if (document.querySelector('#content-wrap #forum-wrap') &&
   // Bind elements
   var form = document.querySelector('#forum-wrap .topic-actions #forum-search');
   var rows = document.querySelectorAll('#forum-wrap .forumbg:not(.announcement) .topics .row');
+  
+  // Fix display buttons when full width is disabled
+  var markAsRead = document.querySelector('#forum-wrap .topic-actions .pagination a[accesskey="m"]')
+  if (markAsRead) {
+    markAsRead.textContent = 'Marcar como leídos';
+  }
 
   // Create new elements for filtering
   var inputFilter = document.createElement('input');
