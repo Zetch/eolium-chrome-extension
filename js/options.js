@@ -13,6 +13,8 @@ var preferences = {
   'eolium_forums_hideRead':          false,
   'eolium_forums_hideClosed':        false,
   'eolium_forums_hideArchived':      false,
+  'eolium_forums_hideIgnored':       false,
+  'eolium_forums_ignoredThreads':    {},
 
   // Threads
   'eolium_threads_compactMode':      false,
@@ -26,10 +28,19 @@ var preferences = {
 };
 
 
-function savePreferences() {
+function toggleThreadsContainer(e) {
+  e.preventDefault();
+  var threads = document.getElementById('eolium_forums_ignoredThreads');
+  threads.classList.toggle('hide');
+  event.target.classList.toggle('open');
+}
+
+
+function savePreferences(e) {
   var toSave = {};
   // Load values from form
   for (name in preferences) {
+    if (name == 'eolium_forums_ignoredThreads') continue;
     var input = document.getElementById(name);
     if (input) {
       var value;
@@ -53,19 +64,29 @@ function savePreferences() {
 }
 
 
-function loadPreferences() {
+function loadPreferences(e) {
   // Restore preferences, it uses default values if they're not defined
   chrome.storage.local.get(preferences, function(items) {
+
     for (name in items) {
       var input = document.getElementById(name);
-      if (input.type === "checkbox") {
-        input.checked = items[name];
+      if (name !== 'eolium_forums_ignoredThreads') {
+        if (input.type === "checkbox") {
+          input.checked = items[name];
+        } else {
+          input.value = items[name];
+        }
       } else {
-        input.value = items[name];
+        var manager = new IgnoredManager(items['eolium_forums_ignoredThreads']);
+        var tree = manager.buildHtml();
+        input.appendChild(tree);
       }
     }
   });
 }
+
+var toggleIgnored = document.getElementById('toggleIgnored');
+toggleIgnored.addEventListener('click', toggleThreadsContainer);
 
 // Load preferences on load
 document.addEventListener('DOMContentLoaded', loadPreferences);
