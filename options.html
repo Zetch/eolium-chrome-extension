@@ -21,25 +21,11 @@
   </div>
 
   <div class="container form">
-    <h4>Cabecera</h4>
+    <h4>Aspecto</h4>
     <div class="option">
       <input type="checkbox" id="eolium_header_compactMode">
       <label for="eolium_header_compactMode">Modo compacto</label>
-      <p class="help">Reduce el tamaño y recoloca los menús, permitiendo aprovechar mejor el espacio en pantallas pequeñas</p>
-    </div>
-    
-    <h4>Zona de Usuario</h4>
-    <div class="option">
-      <input type="checkbox" id="eolium_userZone_compactMode">
-      <label for="eolium_userZone_compactMode">Modo compacto</label>
-      <p class="help">El Panel de Control de usuario se mostrará mas pequeño y como una lista</p>
-    </div>
-
-    <h4>Noticias</h4>
-    <div class="option">
-      <input type="checkbox" id="eolium_news_singleRow">
-      <label for="eolium_news_singleRow">Modo horizontal</label>
-      <p class="help">Muestra las noticias en una sola columna</p>
+      <p class="help">Reduce y recoloca elementos para una mejor visualización.</p>
     </div>
 
     <h4>Foros</h4>
@@ -82,11 +68,6 @@
 
     <h4>Otros</h4>
     <div class="option">
-      <input type="checkbox" id="eolium_other_hideForumTitle">
-      <label for="eolium_other_hideForumTitle">Ocultar título del foro</label>
-      <p class="help">Elimina el título principal del foro (los "breadcumbs" superiores siguen mostrando en que foro estás)</p>
-    </div>
-    <div class="option">
       <input type="checkbox" id="eolium_other_hideRelatedWikis">
       <label for="eolium_other_hideRelatedWikis">Ocultar Wikis relacionados</label>
       <p class="help">Elimina los enlaces a Wikis relacionados que se muestran sobre cada subforo</p>
@@ -101,14 +82,14 @@
       <label for="eolium_other_hideRules">Ocultar reglas</label>
       <p class="help">Elimina el banner superior con las reglas de uso de algunos subforos</p>
     </div>
+    <div class="option">
+      <input type="checkbox" id="eolium_other_hideBanners">
+      <label for="eolium_other_hideBanners">Ocultar publicidad</label>
+      <p class="help">Elimina los banners de publicidad (<span class="warning">Nota: Haciendo
+        esto no estarás ayudando a mantener la comunidad</span>).</p>
+    </div>
   </div>
 
-  <div class="actions container">
-    <span id="status"></span>
-    <button id="savePreferences" href="#">Guardar</button>
-  </div>
-
-  <script src="js/ignored.js"></script>
-  <script src="js/options.js"></script> 
+  <script src="js/options.js"></script>
 </body>
 </html>
