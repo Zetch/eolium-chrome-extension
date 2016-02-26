@@ -1,6 +1,16 @@
 # EOLium para Google Chrome
 Extension que añade algunas mejoras y aspectos visuales en los foros de ElOtroLado.net
 
+### 1.0.0
+* Soporte para EOL 4.0
+* Extensión reescrita casi por completo para eliminar código innecesario y mejorar el rendimiento
+* Código portado a ES6 (set soportado por Chrome 48)
+* Rediseño de la estructura general usando CSS Flex
+* Rediseño de cabecera y menús
+* Eliminada la opción de noticias horizontales (innecesario, ahora son responsive de forma nativa)
+* El estado de los filtros en foros e hilos se mantiene
+* Ya es posible eliminar hilos ignorados desde la página de opciones
+
 ### 0.6
 * Añadida nueva opción para ignorar hilos y ocultarlos
 
