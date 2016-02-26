@@ -24,7 +24,7 @@ body {
   height: 45px;
 }
 
-a { 
+a {
   color: #395a2f;
   text-decoration: none;
 }
@@ -90,33 +90,22 @@ button {
 
 .form .option #eolium_forums_ignoredThreads {
   background-color: #E8E8E8;
-  padding: 5px;
+  padding: 10px;
 }
-
 .form .option #eolium_forums_ignoredThreads.hide {
   display: none;
 }
-
-.form .option #eolium_forums_ignoredThreads ul li a.forum {
-  font-weight: bold;
-}
-
-.actions {
-  padding-top: 15px;
+.form .option #eolium_forums_ignoredThreads .forum-name {
+  font-weight: bolder;
   display: block;
-  text-align: right;
+  margin: 10px 0;
 }
-
-.actions #status {
-  opacity: 0;
-  margin-right: 15px;
-  color: #999;
-  font-style: italic;
-  transition: opacity 0.5s;
+.form .option #eolium_forums_ignoredThreads li {
+  margin: 5px 0 5px 30px;
 }
-
-.actions #status.show {
-  opacity: 1;
+.form .option #eolium_forums_ignoredThreads li .toggle {
+  margin-left: 5px;
+  font-weight: bold;
 }
 
 .form input[type="checkbox"] {
@@ -136,4 +125,7 @@ button {
   margin: 5px 0 0 40px;
   display: block;
   color: #AAA;
+}
+.form .option p.help .warning {
+  color: #a00;
 }
