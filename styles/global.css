@@ -126,7 +126,7 @@ body.eolium #footer {
   cursor: pointer;
 }
 .navbar--profile .username::after {
-  display: inline-block;
+  display: inline;
   margin-left: 5px;
   content: '▼';
   font-size: 1.0rem;
