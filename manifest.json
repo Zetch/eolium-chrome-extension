@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "EOLium",
   "description": "Enable new features on ElOtroLado.net forums like live filtering, hide read threads or compact mode",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Nauzet Hernandez",
 
   "icons": {
@@ -23,7 +23,7 @@
   "permissions": [
     "declarativeContent",
     "tabs",
-    "http://www.elotrolado.net/",
+    "https://www.elotrolado.net/",
     "storage"
   ],
 
@@ -35,7 +35,7 @@
   "content_scripts": [
     {
       "run_at": "document_end",
-      "matches": ["http://www.elotrolado.net/*"],
+      "matches": ["https://www.elotrolado.net/*"],
       "js": [
         "js/global.js"
       ],
@@ -44,7 +44,7 @@
       ]
     }, {
       "run_at": "document_end",
-      "matches": ["http://www.elotrolado.net/foro_*"],
+      "matches": ["https://www.elotrolado.net/foro_*"],
       "js": [
         "js/forums.js"
       ],
@@ -53,7 +53,7 @@
       ]
     }, {
       "run_at": "document_end",
-      "matches": ["http://www.elotrolado.net/hilo_*"],
+      "matches": ["https://www.elotrolado.net/hilo_*"],
       "js": [
         "js/threads.js"
       ],
