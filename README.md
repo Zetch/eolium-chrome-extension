@@ -1,6 +1,9 @@
 # EOLium para Google Chrome
 Extension que añade algunas mejoras y aspectos visuales en los foros de ElOtroLado.net
 
+### 1.1.0
+* Reorganización del menú de desplegables incluyendo nuevos sub-foros
+
 ### 1.0.0
 * Soporte para EOL 4.0
 * Extensión reescrita casi por completo para eliminar código innecesario y mejorar el rendimiento

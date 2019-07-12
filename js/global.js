@@ -21,209 +21,184 @@
           'title': 'Home',
           'align': 'ltr',
           'links': [
-            ['Miembros',           '/memberlist.php'],
-            ['Staff',              '/memberlist.php?mode=leaders'],
-            ['Genteol',            '/gallery.php'],
-            ['Colecciones',        'http://colecciones.elotrolado.net'],
+            ['Miembros', '/memberlist.php'],
+            ['Staff', '/memberlist.php?mode=leaders'],
+            ['Genteol', '/gallery.php'],
+            ['Colecciones', 'http://colecciones.elotrolado.net'],
             ['Búsqueda Avanzanda', '/search.php'],
-            ['Normas',             '/hilo_recordatorio-de-las-principales-normas_1014288']
+            ['Normas', '/hilo_recordatorio-de-las-principales-normas_1014288']
           ]
         },
         'news': {
           'title': 'News',
           'align': 'ltr',
           'links': [
-            ['Consolas',   '/noticias/consolas/'],
-            ['Juegos',     '/noticias/juegos/'],
-            ['Scene',      '/noticias/scene/'],
+            ['Consolas', '/noticias/consolas/'],
+            ['Juegos', '/noticias/juegos/'],
+            ['Scene', '/noticias/scene/'],
             ['Tecnología', '/noticias/tecnologia/'],
-            ['Internet',   '/noticias/internet/'],
-            ['Otros',      '/noticias/otros/']
+            ['Internet', '/noticias/internet/'],
+            ['Otros', '/noticias/otros/']
+          ]
+        },
+        'multi': {
+          'title': 'Multi',
+          'align': 'ltr',
+          'links': [
+            ['General', '/foro_multiplataforma-general_22'],
+            ['Sistemas VR', '/foro_multiplataforma-sistemas-vr_224'],
+            ['C. Alternativas', '/foro_multiplataforma-consolas-alternativas_120'],
+            ['Desarrollo', '/foro_multiplataforma-desarrollo_152']
+          ]
+        },
+        'switch': {
+          'title': 'Switch',
+          'align': 'ltr',
+          'links': [
+            ['General', '/foro_nintendo-switch-general_216'],
+            ['Juegos', '/foro_nintendo-switch-juegos_218'],
+            ['Online', '/foro_nintendo-switch-online_221'],
+            ['Scene', '/foro_nintendo-switch-scene_226']
           ]
         },
         'xone': {
           'title': 'Xbox One',
           'align': 'ltr',
           'links': [
-            ['General',        '/foro_xbox-one-general_200'],
-            ['Juegos',         '/foro_xbox-one-juegos_207'],
-            ['Online',         '/foro_xbox-one-online_210']
+            ['General', '/foro_xbox-one-general_200'],
+            ['Juegos', '/foro_xbox-one-juegos_207'],
+            ['Online', '/foro_xbox-one-online_210']
           ]
         },
         'ps4': {
-          'title': 'PlayStation 4',
+          'title': 'PS4',
           'align': 'ltr',
           'links': [
-            ['General',        '/foro_playstation-4-general_201'],
-            ['Juegos',         '/foro_playstation-4-juegos_208'],
-            ['Online',         '/foro_playstation-4-online_209']
+            ['General', '/foro_playstation-4-general_201'],
+            ['Juegos', '/foro_playstation-4-juegos_208'],
+            ['Online', '/foro_playstation-4-online_209'],
+            ['Scene', '/foro_playstation-4-scene_225']
           ]
         },
         'wiiu': {
           'title': 'Wii U',
           'align': 'ltr',
           'links': [
-            ['General',        '/foro_wii-u-general_191'],
-            ['Juegos',         '/foro_wii-u-juegos_194'],
-            ['Online',         '/foro_wii-u-online_211']
+            ['General', '/foro_wii-u-general_191'],
+            ['Juegos', '/foro_wii-u-juegos_194'],
+            ['Online', '/foro_wii-u-online_211'],
+            ['Scene', '/foro_wii-u-scene_213']
           ]
         },
         'ps3': {
-          'title': 'PlayStation 3',
+          'title': 'PS3',
           'align': 'ltr',
           'links': [
-            ['General',           '/foro_playstation-3-general_149'],
-            ['Juegos',            '/foro_playstation-3-juegos_161'],
-            ['Online',            '/foro_playstation-3-online_162'],
-            ['Scene',             '/foro_playstation-3-scene_163'],
+            ['General', '/foro_playstation-3-general_149'],
+            ['Juegos', '/foro_playstation-3-juegos_161'],
+            ['Online', '/foro_playstation-3-online_162'],
+            ['Scene', '/foro_playstation-3-scene_163'],
             ['Modchips/Softmods', '/foro_playstation-3-modchips-y-softmods_179'],
-            ['Carga de Backups',  '/foro_playstation-3-carga-de-backups_180']
+            ['Carga de Backups', '/foro_playstation-3-carga-de-backups_180']
           ]
         },
         'x360': {
           'title': 'Xbox 360',
           'align': 'ltr',
           'links': [
-            ['General',           '/foro_xbox-360-general_129'],
-            ['Juegos',            '/foro_xbox-360-juegos_138'],
-            ['Online',            '/foro_xbox-360-online_142'],
-            ['Mod. de Lectores',  '/foro_xbox-360-modificacion-de-lectores_143'],
-            ['Grabación',         '/foro_xbox-360-grabacion_151'],
+            ['General', '/foro_xbox-360-general_129'],
+            ['Juegos', '/foro_xbox-360-juegos_138'],
+            ['Online', '/foro_xbox-360-online_142'],
+            ['Mod. de Lectores', '/foro_xbox-360-modificacion-de-lectores_143'],
+            ['Grabación', '/foro_xbox-360-grabacion_151'],
             ['Exploits/Homebrew', '/foro_xbox-360-exploits-y-homebrew_178']
           ]
         },
-        'vita': {
-          'title': 'PS Vita',
-          'align': 'rtl',
-          'links': [
-            ['General',        '/foro_ps-vita-general_185'],
-            ['Juegos',         '/foro_ps-vita-juegos_187'],
-            ['Online',         '/foro_ps-vita-online_190'],
-            ['Scene',          '/foro_ps-vita-scene_192']
-          ]
-        },
         '3ds': {
-          'title': 'Nintendo 3DS',
+          'title': '3DS',
           'align': 'rtl',
           'links': [
-            ['General',        '/foro_nintendo-3ds-general_182'],
-            ['Juegos',         '/foro_nintendo-3ds-juegos_184'],
-            ['Online',         '/foro_nintendo-3ds-online_189'],
-            ['Scene',          '/foro_nintendo-3ds-scene_202']
+            ['General', '/foro_nintendo-3ds-general_182'],
+            ['Juegos', '/foro_nintendo-3ds-juegos_184'],
+            ['Online', '/foro_nintendo-3ds-online_189'],
+            ['Scene', '/foro_nintendo-3ds-scene_202']
           ]
         },
         'otras': {
-          'title': 'Otras Consolas',
+          'title': 'Otras',
           'align': 'rtl',
           'links': [
+            ['PS  Vita',
+              [
+                ['General', '/foro_ps-vita-general_185'],
+                ['Juegos', '/foro_ps-vita-juegos_187'],
+                ['Online', '/foro_ps-vita-online_190'],
+                ['Scene', '/foro_ps-vita-scene_192']
+              ]
+            ],
             ['Wii',
               [
-                ['General',        '/foro_wii-general_148',],
-                ['Juegos',         '/foro_wii-juegos_155',],
-                ['Online',         '/foro_wii-online_156',],
-                ['Scene',          '/foro_wii-scene_165',],
-                ['Modchips',       '/foro_wii-modchips_158',],
-                ['Softmods',       '/foro_wii-softmods_170',],
-                ['Parches',        '/foro_wii-parches-y-grabacion_171']
+                ['General', '/foro_wii-general_148',],
+                ['Juegos', '/foro_wii-juegos_155',],
+                ['Online', '/foro_wii-online_156',],
+                ['Scene', '/foro_wii-scene_165',],
+                ['Modchips', '/foro_wii-modchips_158',],
+                ['Softmods', '/foro_wii-softmods_170',],
+                ['Parches', '/foro_wii-parches-y-grabacion_171']
               ]
             ],
             ['PSP',
               [
-                ['General',            '/foro_psp-general_126'],
-                ['Juegos',             '/foro_psp-juegos_133'],
-                ['Scene',              '/foro_psp-scene_128'],
+                ['General', '/foro_psp-general_126'],
+                ['Juegos', '/foro_psp-juegos_133'],
+                ['Scene', '/foro_psp-scene_128'],
                 ['Firmwares/Modchips', '/foro_psp-firmwares-y-modchips_153'],
-                ['Backups',            '/foro_psp-carga-de-backups_134']
+                ['Backups', '/foro_psp-carga-de-backups_134']
               ]
             ],
             ['Nintendo DS',
               [
-                ['General',     '/foro_nds-general_125'],
-                ['Juegos',      '/foro_nds-juegos_135'],
+                ['General', '/foro_nds-general_125'],
+                ['Juegos', '/foro_nds-juegos_135'],
                 ['Flash Carts', '/foro_nds-flash-carts_150'],
-                ['Scene',       '/foro_nds-scene_130'],
-                ['Backups',     '/foro_nds-carga-de-backups_136']
+                ['Scene', '/foro_nds-scene_130'],
+                ['Backups', '/foro_nds-carga-de-backups_136']
               ]
             ],
             ['PlayStation 2',
               [
-                ['General',          '/foro_playstation-2-general_16'],
-                ['Juegos',            '/foro_playstation-2-juegos_23'],
-                ['Online',            '/foro_playstation-2-online_103'],
-                ['Modchips',          '/foro_playstation-2-modchips_24'],
-                ['Cog-Swap',          '/foro_playstation-2-cog-swap_73'],
+                ['General', '/foro_playstation-2-general_16'],
+                ['Juegos', '/foro_playstation-2-juegos_23'],
+                ['Online', '/foro_playstation-2-online_103'],
+                ['Modchips', '/foro_playstation-2-modchips_24'],
+                ['Cog-Swap', '/foro_playstation-2-cog-swap_73'],
                 ['Parches/Grabación', '/foro_playstation-2-parches-y-grabacion_74'],
-                ['Scene',             '/foro_playstation-2-scene_124']
+                ['Scene', '/foro_playstation-2-scene_124']
               ]
             ],
-            ['Xbox',         '/foro_otras-consolas-xbox_78'],
-            ['GameCube',     '/foro_otras-consolas-gamecube_85'],
-            ['Dreamcast',    '/foro_otras-consolas-dreamcast_6'],
-            ['PlayStation',  '/foro_otras-consolas-playstation_81'],
-            ['GBA',          '/foro_otras-consolas-gba_66'],
-            ['Multiplataforma', '/foro_otras-consolas-multiplataforma_22'],
-            ['Alternativas', '/foro_otras-consolas-consolas-alternativas_120'],
-            ['Clásicas',     '/foro_otras-consolas-consolas-clasicas_80'],
-            ['Desarrollo',   'http://www.elotrolado.net/foro_otras-consolas-desarrollo_152']
-          ]
-        },
-        'more': {
-          'title': 'Más',
-          'align': 'rtl',
-          'links': [
-            ['Off-topic',
+            ['Retro',
               [
-                ['Miscelánea',       '/foro_off-topic-miscelanea_11'],
-                ['El rincón de EOL', '/foro_off-topic-el-rincon-del-eoliano_67'],
-                ['Manganime/Cómics', '/foro_off-topic-manganime-y-comics_60'],
-                ['Literatura',       '/foro_off-topic-literatura_61'],
-                ['Música',           '/foro_off-topic-musica_115'],
-                ['Cine',             '/foro_off-topic-cine_59'],
-                ['ex-Pruebas',       '/foro_off-topic-ex-pruebas_21']
+                ['Xbox', '/foro_otras-consolas-xbox_78'],
+                ['GameCube', '/foro_otras-consolas-gamecube_85'],
+                ['Dreamcast', '/foro_otras-consolas-dreamcast_6'],
+                ['PlayStation', '/foro_otras-consolas-playstation_81'],
+                ['GBA', '/foro_retro-y-descatalogado-game-boy_66'],
+                ['Clásicas', '/foro_otras-consolas-consolas-clasicas_80'],
+                ['Arcade y Emulación', '/foro_retro-y-descatalogado-arcade-y-emulacion_220']
               ]
-            ],
-            ['Compra-Venta',
-              [
-                ['Nueva Generación', '/foro_compra-venta-nueva-generacion_212'],
-                ['Actuales',         '/foro_compra-venta-consolas-actuales_97'],
-                ['Modernas',         '/foro_compra-venta-consolas-modernas_164'],
-                ['Clásicas',         '/foro_compra-venta-consolas-clasicas_98'],
-                ['Informática',      '/foro_compra-venta-informatica_99'],
-                ['Otros',            '/foro_compra-venta-otros_100'],
-                ['Feedback',         '/foro_compra-venta-feedback-cv_117']
-              ]
-            ],
-            ['Noticias',
-              [
-                ['El Buffer',  '/foro_noticias-el-buffer_157'],
-                ['Consolas',   '/foro_noticias-consolas_195'],
-                ['Juegos',     '/foro_noticias-juegos_196'],
-                ['Scene',      '/foro_noticias-scene_197'],
-                ['Tecnología', '/foro_noticias-tecnologia_33'],
-                ['Internet',   '/foro_noticias-internet_90'],
-                ['Otros',      '/foro_noticias-otros_30']
-              ]
-            ],
-            ['Feedback',
-              [
-                ['Políticas EOL',       '/foro_feedback-politicas-de-eol_10'],
-                ['Cuestiones técnicas', '/foro_feedback-cuestiones-tecnicas_166'],
-                ['Wiki',                '/foro_feedback-wiki_159'],
-                ['Compra-Venta',        '/foro_compra-venta-feedback-cv_117']
-              ]
-            ],
-            ['Wiki', '/wiki/']
+            ]
           ]
         },
         'pc': {
           'title': 'PC',
           'align': 'rtl',
           'links': [
-            ['General',        '/foro_pc-general_18'],
-            ['Hardware',       '/foro_pc-hardware_9'],
-            ['Mac',            '/foro_pc-mac_169'],
+            ['General', '/foro_pc-general_18'],
+            ['Hardware', '/foro_pc-hardware_9'],
+            ['Mac', '/foro_pc-mac_169'],
             ['Software Libre', '/foro_pc-software-libre_84'],
-            ['Juegos',         '/foro_pc-juegos_62']
+            ['Juegos', '/foro_pc-juegos_62'],
+            ['Online', '/foro_pc-online_64']
           ]
         },
         'tecno': {
@@ -233,7 +208,61 @@
             ['Telefonía',      '/foro_tecnologia-telefonia_119'],
             ['Electrónica',    '/foro_tecnologia-electronica-de-consumo_141']
           ]
-        }
+        },
+        'cv': {
+          'title': 'C/V',
+          'align': 'rtl',
+          'links': [
+            ['Nueva Generación', '/foro_compra-venta-nueva-generacion_212'],
+            ['Actuales', '/foro_compra-venta-consolas-actuales_97'],
+            ['Modernas', '/foro_compra-venta-consolas-modernas_164'],
+            ['Clásicas', '/foro_compra-venta-consolas-clasicas_98'],
+            ['Informática', '/foro_compra-venta-informatica_99'],
+            ['Otros', '/foro_compra-venta-otros_100'],
+            ['Feedback', '/foro_compra-venta-feedback-cv_117']
+          ]
+        },
+        'offtopic': {
+          'title': 'Off-Topic',
+          'align': 'rtl',
+          'links': [
+            ['Miscelánea', '/foro_off-topic-miscelanea_11'],
+            ['El rincón de EOL', '/foro_off-topic-el-rincon-del-eoliano_67'],
+            ['Series y Cine', '/foro_off-topic-series-y-cine_219'],
+            ['Manganime y Cómics', '/foro_off-topic-manganime-y-comics_60'],
+            ['Literatura', '/foro_off-topic-literatura_61'],
+            ['Música', '/foro_off-topic-musica_115'],
+            ['ex-Pruebas', '/foro_off-topic-ex-pruebas_21']
+          ]
+        },
+        'more': {
+          'title': 'Más',
+          'align': 'rtl',
+          'links': [
+            ['Feedback',
+              [
+                ['Políticas EOL', '/foro_feedback-politicas-de-eol_10'],
+                ['Cuestiones técnicas', '/foro_feedback-cuestiones-tecnicas_166'],
+                ['Wiki', '/foro_feedback-wiki_159'],
+                ['Compra-Venta', '/foro_compra-venta-feedback-cv_117']
+              ]
+            ],
+            ['Noticias',
+              [
+                ['El Buffer', '/foro_noticias-el-buffer_157'],
+                ['Consolas', '/foro_noticias-consolas_195'],
+                ['Juegos', '/foro_noticias-juegos_196'],
+                ['eSports', '/foro_noticias-esports_227'],
+                ['Scene', '/foro_noticias-scene_197'],
+                ['Tecnología', '/foro_noticias-tecnologia_33'],
+                ['Internet', '/foro_noticias-internet_90'],
+                ['Otros', '/foro_noticias-otros_30'],
+                ['Breves', '/foro_noticias-breves_214']
+              ]
+            ],
+            ['Wiki', '/wiki/']
+          ]
+        },
       };
 
       // Get user metadata
