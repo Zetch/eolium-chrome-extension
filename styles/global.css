@@ -67,7 +67,6 @@ body.eolium #footer {
   line-height: 56px;
 }
 
-
 .navbar {
   z-index: 300;
   background-color: #395a2f;
@@ -97,7 +96,7 @@ body.eolium #footer {
   right: 53px !important;
   color: #555;
 }
-.navbar #h-search input[type="submit"] {
+.navbar #h-search input[type='submit'] {
   left: initial !important;
   right: 20px !important;
   top: initial !important;
@@ -111,7 +110,8 @@ body.eolium #footer {
 }
 .navbar--profile .badge {
   margin-right: 5px;
-  width: 20px; height: 20px;
+  width: 20px;
+  height: 20px;
   line-height: 20px;
   background-color: #ff7f00;
   color: white;
@@ -129,7 +129,7 @@ body.eolium #footer {
   display: inline;
   margin-left: 5px;
   content: '▼';
-  font-size: 1.0rem;
+  font-size: 1rem;
 }
 .navbar--profile.open .username::after {
   transform: rotate(180deg);
@@ -143,15 +143,14 @@ body.eolium #footer {
   font-size: 1.6rem;
   position: absolute;
   visibility: hidden;
-  top: 56px; right: -15px;
+  top: 56px;
+  right: -15px;
   background-color: white;
   z-index: 199;
   padding: 5px 0;
   min-width: 200px;
-  box-shadow:
-    0 2px 2px 0 rgba(0,0,0,.14),
-    0 3px 1px -2px rgba(0,0,0,.2),
-    0 1px 5px 0 rgba(0,0,0,.12);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 .navbar--profile.open .popup {
   visibility: visible;
@@ -174,11 +173,11 @@ body.eolium #footer {
   margin-right: 5px;
   background-size: contain;
   -webkit-filter: brightness(40%);
-          filter: brightness(40%);
+  filter: brightness(40%);
 }
 .navbar--profile .popup a#ucp-login::before {
   -webkit-filter: brightness(60%);
-          filter: brightness(60%);
+  filter: brightness(60%);
   background-size: auto;
   background-image: url(/img/key.png);
   background-repeat: no-repeat;
@@ -204,6 +203,10 @@ body.eolium #footer {
   flex-grow: 1;
   flex-flow: row wrap;
   justify-content: center;
+}
+.menubar .main > li > a {
+  color: #555;
+  text-decoration: none;
 }
 .menubar .main > li {
   line-height: 36px !important;
@@ -232,10 +235,8 @@ body.eolium #footer {
   min-width: 150px;
   background-color: white;
   padding: 10px 0;
-  box-shadow:
-    0 2px 2px 0 rgba(0,0,0,.14),
-    0 3px 1px -2px rgba(0,0,0,.2),
-    0 1px 5px 0 rgba(0,0,0,.12);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 .menubar .main .main-popup.ltr {
   left: 0;
@@ -266,7 +267,7 @@ body.eolium #footer {
   white-space: nowrap;
 }
 .menubar .main .main-popup .toggle::after {
-  font-size: .5em;
+  font-size: 0.5em;
   display: inline-block;
   margin-left: 5px;
   content: '▼';
@@ -284,9 +285,8 @@ body.eolium #footer {
 }
 .menubar .main .main-popup .submenu {
   padding: 5px 0;
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
-
 
 @media (min-width: 638px) {
   .bar {
@@ -306,7 +306,7 @@ body.eolium #footer {
   }
 
   .navbar--profile .username {
-    font-size: 2.0rem;
+    font-size: 2rem;
     margin-right: 15px;
   }
   .navbar--profile .username::after {

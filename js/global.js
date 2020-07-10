@@ -48,8 +48,19 @@
             ['General', '/foro_multiplataforma-general_22'],
             ['Sistemas VR', '/foro_multiplataforma-sistemas-vr_224'],
             ['C. Alternativas', '/foro_multiplataforma-consolas-alternativas_120'],
+            ['Google Stadia', '/foro_multiplataforma-google-stadia_228'],
             ['Desarrollo', '/foro_multiplataforma-desarrollo_152']
           ]
+        },
+        'ps5': {
+          'title': 'PS5',
+          'align': 'ltr',
+          'link': '/foro_multiplataforma-playstation-5_229'
+        },
+        'xsx': {
+          'title': 'XSX',
+          'align': 'ltr',
+          'link': '/foro_multiplataforma-xbox-series-x_230'
         },
         'switch': {
           'title': 'Switch',
@@ -412,56 +423,64 @@
 
               Object.keys(navigation).forEach(function(name){
                 const menuItem = document.createElement('li');
-                const toggle = document.createElement('span');
-                toggle.classList.add('toggle');
-                toggle.textContent = navigation[name].title;
-                toggle.addEventListener('click', function(event){
-                  Array.prototype
-                    .slice.call(document.querySelectorAll('.menubar .main > li'))
-                    .forEach(function(item) {
-                      if (item !== event.target.parentNode) item.classList.remove('open');
-                    });
-                  menuItem.classList.toggle('open');
-                });
-                menuItem.appendChild(toggle);
 
-                const submenu = document.createElement('ul');
-                submenu.classList.add('main-popup');
-                submenu.classList.add(navigation[name].align);
-                navigation[name].links.forEach(function(link){
-                  const li = document.createElement('li');
-                  // Add menu link
-                  if (typeof(link[1]) === 'string') {
-                    const a = document.createElement('a');
-                    a.textContent = link[0];
-                    a.setAttribute('href', link[1]);
-                    li.appendChild(a);
+                if (navigation[name].links) {
+                  const toggle = document.createElement('span');
+                  toggle.classList.add('toggle');
+                  toggle.textContent = navigation[name].title;
+                  toggle.addEventListener('click', function(event){
+                    Array.prototype
+                      .slice.call(document.querySelectorAll('.menubar .main > li'))
+                      .forEach(function(item) {
+                        if (item !== event.target.parentNode) item.classList.remove('open');
+                      });
+                    menuItem.classList.toggle('open');
+                  });
+                  menuItem.appendChild(toggle);
 
-                  // Or create sub links
-                  } else {
-                    const s = document.createElement('span');
-                    s.classList.add('toggle');
-                    s.textContent = link[0];
-                    s.addEventListener('click', function(event) {
-                      li.classList.toggle('open');
-                    });
-                    li.appendChild(s);
-
-                    const ul = document.createElement('ul');
-                    ul.classList.add('submenu');
-                    link[1].forEach(function(sublink) {
-                      const li = document.createElement('li');
+                  const submenu = document.createElement('ul');
+                  submenu.classList.add('main-popup');
+                  submenu.classList.add(navigation[name].align);
+                  navigation[name].links.forEach(function(link){
+                    const li = document.createElement('li');
+                    // Add menu link
+                    if (typeof(link[1]) === 'string') {
                       const a = document.createElement('a');
-                      a.textContent = sublink[0];
-                      a.setAttribute('href', sublink[1]);
+                      a.textContent = link[0];
+                      a.setAttribute('href', link[1]);
                       li.appendChild(a);
-                      ul.appendChild(li);
-                    });
-                    li.appendChild(ul);
-                  }
-                  submenu.appendChild(li);
-                });
-                menuItem.appendChild(submenu);
+
+                    // Or create sub links
+                    } else {
+                      const s = document.createElement('span');
+                      s.classList.add('toggle');
+                      s.textContent = link[0];
+                      s.addEventListener('click', function(event) {
+                        li.classList.toggle('open');
+                      });
+                      li.appendChild(s);
+
+                      const ul = document.createElement('ul');
+                      ul.classList.add('submenu');
+                      link[1].forEach(function(sublink) {
+                        const li = document.createElement('li');
+                        const a = document.createElement('a');
+                        a.textContent = sublink[0];
+                        a.setAttribute('href', sublink[1]);
+                        li.appendChild(a);
+                        ul.appendChild(li);
+                      });
+                      li.appendChild(ul);
+                    }
+                    submenu.appendChild(li);
+                  });
+                  menuItem.appendChild(submenu);
+                } else {
+                  const anchor = document.createElement('a');
+                  anchor.textContent = navigation[name].title;
+                  anchor.setAttribute('href', navigation[name].link);
+                  menuItem.appendChild(anchor);
+                }
                 menu.appendChild(menuItem);
               });
 
