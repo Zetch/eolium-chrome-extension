@@ -1,95 +1,110 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>EOLium Preferencias</title>
-  <link rel="stylesheet" href="styles/options.css">
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>EOLium Preferencias</title>
+    <link rel="stylesheet" href="styles/options.css" />
+  </head>
 
-<body>
-  <div class="header">
-    <div class="container">
-      <img class="logo" src="images/icon48.png" alt="EOLium">
-      <h1>EOLium</h1>
-    </div>
-  </div>
-  <div class="subheader">
-    <div class="container">
-      <h2>Preferences</h2>
-    </div>
-  </div>
-
-  <div class="container form">
-    <h4>Aspecto</h4>
-    <div class="option">
-      <input type="checkbox" id="eolium_header_compactMode">
-      <label for="eolium_header_compactMode">Modo compacto</label>
-      <p class="help">Reduce y recoloca elementos para una mejor visualización.</p>
+  <body>
+    <div class="header">
+      <h1><span class="orange">eol</span>ium</h1>
     </div>
 
-    <h4>Foros</h4>
-    <div class="option">
-      <input type="checkbox" id="eolium_forums_hideRead">
-      <label for="eolium_forums_hideRead">Siempre ocultar leídos</label>
-      <p class="help">Define el estado por defecto del botón al cargar la página</p>
-    </div>
-    <div class="option">
-      <input type="checkbox" id="eolium_forums_hideClosed">
-      <label for="eolium_forums_hideClosed">Siempre ocultar cerrados</label>
-      <p class="help">Define el estado por defecto del botón al cargar la página</p>
-    </div>
-    <div class="option">
-      <input type="checkbox" id="eolium_forums_hideArchived">
-      <label for="eolium_forums_hideArchived">Siempre ocultar archivados</label>
-      <p class="help">Define el estado por defecto del botón al cargar la página</p>
-    </div>
-    <div class="option">
-      <input type="checkbox" id="eolium_forums_hideIgnored">
-      <label for="eolium_forums_hideIgnored">Siempre ocultar ignorados</label>
-      <p class="help">Define el estado por defecto del botón al cargar la página</p>
-    </div>
-    <div class="option">
-      <a href="#" id="toggleIgnored">Ver hilos</a>
-      <div id="eolium_forums_ignoredThreads" class="hide"></div>
+    <div class="form">
+      <div class="option">
+        <input type="checkbox" id="eolium_header_compactMode" />
+        <label for="eolium_header_compactMode">Modo compacto</label>
+        <p class="help">
+          Reduce y recoloca elementos para una mejor visualización. Es necesario
+          recargar la página.
+        </p>
+      </div>
+
+      <hr />
+
+      <h4>Foros</h4>
+      <div class="option">
+        <input type="checkbox" id="eolium_forums_hideRead" />
+        <label for="eolium_forums_hideRead">Siempre ocultar leídos</label>
+      </div>
+      <div class="option">
+        <input type="checkbox" id="eolium_forums_hideClosed" />
+        <label for="eolium_forums_hideClosed">Siempre ocultar cerrados</label>
+      </div>
+      <div class="option">
+        <input type="checkbox" id="eolium_forums_hideArchived" />
+        <label for="eolium_forums_hideArchived"
+          >Siempre ocultar archivados</label
+        >
+      </div>
+      <div class="option">
+        <input type="checkbox" id="eolium_forums_hideIgnored" />
+        <label for="eolium_forums_hideIgnored"
+          >Siempre ocultar ignorados (<a href="#" id="toggleIgnored"
+            >Ver hilos</a
+          >)</label
+        >
+      </div>
+      <div class="threads">
+        <div id="eolium_forums_ignoredThreads" class="hide"></div>
+      </div>
+
+      <hr />
+
+      <h4>Hilos</h4>
+      <div class="option">
+        <input type="checkbox" id="eolium_threads_compactMode" />
+        <label for="eolium_threads_compactMode">Mostrar posts compactos</label>
+      </div>
+      <div class="option">
+        <input type="checkbox" id="eolium_threads_hideImages" />
+        <label for="eolium_threads_hideImages">Siempre ocultar imágenes</label>
+      </div>
+
+      <hr />
+
+      <h4>Otros</h4>
+      <div class="option">
+        <input type="checkbox" id="eolium_other_hideRelatedWikis" />
+        <label for="eolium_other_hideRelatedWikis"
+          >Ocultar Wikis relacionados</label
+        >
+        <p class="help">
+          Elimina los enlaces a Wikis relacionados que se muestran sobre cada
+          subforo
+        </p>
+      </div>
+      <div class="option">
+        <input type="checkbox" id="eolium_other_hideGlobalAnnouces" />
+        <label for="eolium_other_hideGlobalAnnouces"
+          >Ocultar Anuncions Globales</label
+        >
+        <p class="help">
+          Elimina los Anuncios Globales que se muestran sobre cada subforo
+        </p>
+      </div>
+      <div class="option">
+        <input type="checkbox" id="eolium_other_hideRules" />
+        <label for="eolium_other_hideRules">Ocultar reglas</label>
+        <p class="help">
+          Elimina el banner superior con las reglas de uso de algunos subforos
+        </p>
+      </div>
+      <div class="option">
+        <input type="checkbox" id="eolium_other_hideBanners" />
+        <label for="eolium_other_hideBanners">Ocultar publicidad</label>
+        <p class="help">
+          Elimina los banners de publicidad (<span class="warning"
+            >Nota: Haciendo esto no estarás ayudando a mantener la
+            comunidad</span
+          >).
+        </p>
+      </div>
     </div>
 
-    <h4>Hilos</h4>
-    <div class="option">
-      <input type="checkbox" id="eolium_threads_compactMode">
-      <label for="eolium_threads_compactMode">Mantener el Modo Compacto</label>
-      <p class="help">Define el estado por defecto del botón al cargar la página</p>
-    </div>
-    <div class="option">
-      <input type="checkbox" id="eolium_threads_hideImages">
-      <label for="eolium_threads_hideImages">Siempre ocultar imágenes</label>
-      <p class="help">Define el estado por defecto del botón al cargar la página</p>
-    </div>
-
-    <h4>Otros</h4>
-    <div class="option">
-      <input type="checkbox" id="eolium_other_hideRelatedWikis">
-      <label for="eolium_other_hideRelatedWikis">Ocultar Wikis relacionados</label>
-      <p class="help">Elimina los enlaces a Wikis relacionados que se muestran sobre cada subforo</p>
-    </div>
-    <div class="option">
-      <input type="checkbox" id="eolium_other_hideGlobalAnnouces">
-      <label for="eolium_other_hideGlobalAnnouces">Ocultar Anuncions Globales</label>
-      <p class="help">Elimina los Anuncios Globales que se muestran sobre cada subforo</p>
-    </div>
-    <div class="option">
-      <input type="checkbox" id="eolium_other_hideRules">
-      <label for="eolium_other_hideRules">Ocultar reglas</label>
-      <p class="help">Elimina el banner superior con las reglas de uso de algunos subforos</p>
-    </div>
-    <div class="option">
-      <input type="checkbox" id="eolium_other_hideBanners">
-      <label for="eolium_other_hideBanners">Ocultar publicidad</label>
-      <p class="help">Elimina los banners de publicidad (<span class="warning">Nota: Haciendo
-        esto no estarás ayudando a mantener la comunidad</span>).</p>
-    </div>
-  </div>
-
-  <script src="js/options.js"></script>
-</body>
+    <script src="js/browser-polyfill.js"></script>
+    <script src="js/options.js"></script>
+  </body>
 </html>
