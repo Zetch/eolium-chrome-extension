@@ -31,12 +31,15 @@ browser.storage.local
           title: 'News',
           align: 'ltr',
           links: [
+            ['El Buffer', '/foro_noticias-el-buffer_157'],
             ['Consolas', '/noticias/consolas/'],
             ['Juegos', '/noticias/juegos/'],
+            ['eSports', '/foro_noticias-esports_227'],
             ['Scene', '/noticias/scene/'],
             ['Tecnología', '/noticias/tecnologia/'],
             ['Internet', '/noticias/internet/'],
-            ['Otros', '/noticias/otros/']
+            ['Otros', '/noticias/otros/'],
+            ['Breves', '/foro_noticias-breves_214']
           ]
         },
         multi: {
@@ -56,12 +59,18 @@ browser.storage.local
         ps5: {
           title: 'PS5',
           align: 'ltr',
-          link: '/foro_multiplataforma-playstation-5_229'
+          links: [
+            ['General', '/foro_multiplataforma-playstation-5_229'],
+            ['Juegos', '/foro_playstation-5-juegos_234']
+          ]
         },
         xsx: {
           title: 'XSX',
           align: 'ltr',
-          link: '/foro_multiplataforma-xbox-series-x_230'
+          links: [
+            ['General', '/foro_multiplataforma-xbox-series-x_230'],
+            ['Juegos', '/foro_xbox-series-juegos_232']
+          ]
         },
         switch: {
           title: 'Switch',
