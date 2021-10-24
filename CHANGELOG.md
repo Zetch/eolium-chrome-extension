@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.5.0
+
+- Modo oscuro
+- Añadidos algunos subforos que faltaban en el menu
+
 ### 1.3.0
 
 - Extensión portada a Mozilla Firefox (con browser-polyfill añadido)

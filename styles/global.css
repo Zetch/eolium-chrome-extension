@@ -325,3 +325,555 @@ body.eolium #footer {
     display: block;
   }
 }
+
+/* Dark mode */
+/* Color palette (from TailwindCSS) */
+:root {
+  --gray-100: #f4f4f5;
+  --gray-200: #e4e4e7;
+  --gray-300: #d4d4d8;
+  --gray-400: #a1a1aa;
+  --gray-500: #71717a;
+  --gray-600: #52525b;
+  --gray-700: #3f3f46;
+  --gray-800: #27272a;
+  --gray-900: #18181b;
+
+  --orange-100: #ffedd5;
+  --orange-200: #fed7aa;
+  --orange-300: #fdba74;
+  --orange-400: #fb923c;
+  --orange-500: #f97316;
+  --orange-600: #ea580c;
+  --orange-700: #c2410c;
+  --orange-800: #9a3412;
+  --orange-900: #7c2d12;
+
+  --green-100: #ecfccb;
+  --green-200: #d9f99d;
+  --green-300: #bef264;
+  --green-400: #a3e635;
+  --green-500: #84cc16;
+  --green-600: #65a30d;
+  --green-700: #4d7c0f;
+  --green-800: #3f6212;
+  --green-900: #365314;
+}
+
+/* Global */
+html.dark body {
+  color: var(--gray-200);
+  background-color: black;
+}
+html.dark body.eolium {
+  background-color: var(--gray-900) !important;
+}
+html.dark a {
+  color: white;
+}
+html.dark a:hover {
+  color: var(--orange-400) !important;
+}
+html.dark .container,
+html.dark .container-fluid {
+  background-color: var(--gray-900);
+}
+html.dark .action-btn,
+html.dark #format-buttons button,
+html.dark #format-buttons select {
+  background-color: var(--orange-400);
+}
+html.dark .action-btn:hover,
+html.dark #format-buttons button:hover {
+  color: white !important;
+  background-color: var(--orange-500);
+}
+html.dark .btn-primary,
+html.dark #footer-bar a {
+  background-color: var(--green-300);
+  color: var(--green-900);
+  border-color: var(--green-300);
+}
+html.dark .btn-primary:hover,
+html.dark #footer-bar a:hover {
+  background-color: var(--green-500);
+  color: var(--green-900) !important;
+}
+
+/* Tables */
+html.dark .table-striped > tbody > tr:nth-of-type(2n + 1) {
+  background-color: var(--gray-800);
+}
+html.dark .table-hover > tbody > tr:hover {
+  background-color: var(--gray-600);
+}
+html.dark .table > thead > tr > th,
+html.dark .table > thead > tr > td,
+html.dark .table > tbody > tr > th,
+html.dark .table > tbody > tr > td,
+html.dark .table > tfoot > tr > th,
+html.dark .table > tfoot > tr > td {
+  border-top-color: var(--gray-700);
+}
+
+/* Forms */
+html.dark input:not([type='submit']),
+html.dark .form-control,
+html.dark #smileys {
+  color: var(--gray-200);
+  background-color: var(--gray-800);
+  border-color: var(--gray-700);
+}
+html.dark .panel-body .form-control,
+html.dark .panel-body #smileys {
+  background-color: var(--gray-700);
+  border-color: var(--gray-600);
+}
+
+/* Embed elements */
+html.dark .btn-embed {
+  color: var(--green-200);
+}
+html.dark .btn-embed:hover {
+  color: var(--orange-400);
+}
+html.dark .embed-wrap {
+  background-color: var(--gray-800);
+}
+
+/* Actions, pagination */
+html.dark .forum-actions .pages a,
+html.dark .forum-actions .pages strong,
+html.dark .topic-actions .pages a,
+html.dark .topic-actions .pages strong,
+html.dark #ucp-actions .pages a,
+html.dark #ucp-actions .pages strong,
+html.dark #mcp-actions .pages a,
+html.dark #mcp-actions .pages strong,
+html.dark #news-actions .pages a,
+html.dark #news-actions .pages strong,
+html.dark #memberlist-actions .pages a,
+html.dark #memberlist-actions .pages strong,
+html.dark .forum-actions .pagination-menu > a,
+html.dark .topic-actions .pagination-menu > a,
+html.dark #ucp-actions .pagination-menu > a,
+html.dark #mcp-actions .pagination-menu > a,
+html.dark #news-actions .pagination-menu > a,
+html.dark #memberlist-actions .pagination-menu > a {
+  color: var(--green-100);
+  background-color: var(--gray-800);
+}
+html.dark .forum-actions .pages strong,
+html.dark .forum-actions .pages a:hover,
+html.dark .topic-actions .pages strong,
+html.dark .topic-actions .pages a:hover,
+html.dark #ucp-actions .pages strong,
+html.dark #ucp-actions .pages a:hover,
+html.dark #mcp-actions .pages strong,
+html.dark #mcp-actions .pages a:hover,
+html.dark #news-actions .pages strong,
+html.dark #news-actions .pages a:hover,
+html.dark #memberlist-actions .pages strong,
+html.dark #memberlist-actions .pages a:hover,
+html.dark .forum-actions .pagination-menu > a:hover,
+html.dark .topic-actions .pagination-menu > a:hover,
+html.dark #ucp-actions .pagination-menu > a:hover,
+html.dark #mcp-actions .pagination-menu > a:hover,
+html.dark #news-actions .pagination-menu > a:hover,
+html.dark #memberlist-actions .pagination-menu > a:hover,
+html.dark .forum-actions form input[type='submit'],
+html.dark .topic-actions form input[type='submit'],
+html.dark .forum-actions form input.toggle,
+html.dark .topic-actions form input.toggle {
+  color: white !important;
+  background-color: var(--orange-400);
+}
+html.dark .forum-actions .pagination-menu > div,
+html.dark .topic-actions .pagination-menu > div,
+html.dark #ucp-actions .pagination-menu > div,
+html.dark #mcp-actions .pagination-menu > div,
+html.dark #news-actions .pagination-menu > div,
+html.dark #memberlist-actions .pagination-menu > div {
+  background-color: var(--gray-700);
+}
+html.dark .topic-actions form input.toggle.active {
+  background-color: var(--gray-700);
+}
+html.dark .forum-actions .pagination-menu > div::before,
+html.dark .topic-actions .pagination-menu > div::before,
+html.dark #ucp-actions .pagination-menu > div::before,
+html.dark #mcp-actions .pagination-menu > div::before,
+html.dark #news-actions .pagination-menu > div::before,
+html.dark #memberlist-actions .pagination-menu > div::before {
+  border-bottom-color: var(--gray-700);
+}
+
+/* Header */
+html.dark #header {
+  /* background-image: linear-gradient(var(--green-700), var(--gray-900)); */
+}
+html.dark #h-s-keywords {
+  color: var(--gray-200);
+  background-color: var(--gray-800);
+}
+html.dark #s-selector,
+html.dark #s-popup {
+  background-color: var(--gray-800);
+}
+html.dark #s-popup > a {
+  color: var(--gray-200);
+}
+html.dark #h-popup {
+  background-color: var(--gray-700);
+}
+html.dark #h-p-content,
+html.dark #h-p-content a,
+html.dark #u-nick a.active {
+  color: var(--gray-200);
+}
+html.dark #h-p-guest input[type='text'],
+html.dark #h-p-guest input[type='password'] {
+  color: var(--gray-200);
+  background-color: var(--gray-800);
+  border-color: var(--gray-900);
+}
+html.dark #u-avatar img[alt='Avatar de invitado'] {
+  filter: invert() brightness(200%);
+}
+
+/* Menu */
+html.dark #menu > a {
+  color: var(--gray-400);
+}
+html.dark #menu div[id^='popup'] {
+  background-color: var(--gray-500);
+}
+html.dark #menu div[id^='popup'] a {
+  color: var(--gray-100);
+}
+html.dark #menu #popup-main::before,
+html.dark #menu #popup-multi::before {
+  border-left-color: var(--gray-500);
+}
+html.dark #menu #popup-retro::before,
+html.dark #menu #popup-more::before {
+  border-bottom-color: var(--gray-500);
+}
+
+/* News */
+html.dark .new .wrap,
+html.dark #shortnews,
+html.dark .news-ad {
+  color: var(--gray-300);
+  background-color: var(--gray-800);
+}
+html.dark .new .wrap::before {
+  border-bottom-color: var(--gray-800);
+}
+html.dark .new .wrap .newcat,
+html.dark #shortnews h2 a {
+  color: var(--gray-400);
+}
+html.dark .new .wrap h2 a,
+html.dark #shortnews h3 a {
+  color: var(--green-200);
+}
+html.dark .new .meta,
+html.dark #relatednews a:not(.normal) .date {
+  background-color: var(--orange-400);
+}
+html.dark .new .meta::after,
+html.dark #relatednews a:not(.normal) .date::after {
+  border-right-color: var(--orange-400);
+}
+html.dark #sidebar .section h2 {
+  background-color: var(--green-200);
+  color: var(--green-900);
+}
+html.dark #sidebar .section h2::after {
+  border-right-color: var(--green-200);
+}
+html.dark #sidebar .section {
+  background-color: var(--gray-700);
+}
+html.dark #sidebar .section a span {
+  border-bottom-color: var(--gray-800);
+}
+html.dark #sidebar .section a::before {
+  color: var(--gray-700);
+  border-bottom-color: var(--gray-200);
+}
+html.dark #n-search input[type='submit'] {
+  border-left-color: var(--gray-500);
+  background-color: var(--orange-400);
+}
+html.dark #n-s-select {
+  color: var(--gray-200);
+  background-color: var(--gray-800);
+}
+html.dark #slider #slider-header,
+html.dark #slider #slider-reach {
+  background-color: var(--orange-400);
+}
+html.dark #slider #slider-title::after {
+  border-right-color: var(--orange-400);
+}
+html.dark #slider #slider-reach::after {
+  border-top-color: var(--orange-400);
+}
+html.dark #slider #slider-title:hover {
+  color: white !important;
+}
+html.dark #slider #slider-links a:hover {
+  background-color: var(--orange-400);
+  color: white !important;
+}
+html.dark #slider #slider-links a.active {
+  border-bottom-color: var(--orange-400);
+}
+
+/* News detail */
+html.dark #news-singlenew-title {
+  background-color: var(--gray-800);
+}
+html.dark #news-singlenew-title h1 {
+  color: var(--gray-400);
+}
+html.dark #news-singlenew-subtitle {
+  background-color: var(--gray-700);
+}
+html.dark #news-single #news-inner-wrap {
+  color: var(--gray-300);
+  background-color: var(--gray-800);
+}
+html.dark #news-single #news-inner-wrap::before {
+  border-bottom-color: var(--gray-700);
+}
+html.dark #news-singlenew-subtitle {
+  color: var(--gray-400);
+  background-color: var(--gray-700);
+}
+html.dark #news-singlenew-subtitle a {
+  color: var(--gray-300);
+}
+html.dark #news-single #news-inner-wrap #news-top-container,
+html.dark #news-social > * {
+  border-color: var(--gray-700);
+}
+html.dark #news-singlenew-prev,
+html.dark #news-singlenew-next {
+  border-left-color: var(--gray-800);
+}
+html.dark #news-social > :hover,
+html.dark #news-singlenew-prev:hover,
+html.dark #news-singlenew-next:hover {
+  color: white !important;
+  background-color: var(--orange-400);
+}
+html.dark #news-cat,
+html.dark #news-cat a,
+html.dark #news-author {
+  color: var(--gray-200);
+}
+
+/* News comments */
+html.dark #news-comments .n-c-user {
+  border-bottom-color: var(--gray-700);
+}
+html.dark #news-comments .n-c-text {
+  color: var(--gray-300);
+}
+
+/* Quotes */
+html.dark blockquote,
+html.dark blockquote blockquote blockquote {
+  background-color: var(--gray-600);
+  border-left-color: var(--gray-400);
+}
+html.dark blockquote blockquote {
+  background-color: var(--gray-500);
+}
+
+/* Forums */
+html.dark #breadcrumbs,
+html.dark #breadcrumbs a {
+  color: var(--gray-400);
+}
+html.dark .section .header {
+  background-color: var(--gray-700);
+}
+html.dark .section .header::after {
+  border-right-color: var(--gray-700);
+}
+html.dark .section .forum,
+html.dark .section .forum .topicbtn,
+html.dark .section .topic,
+html.dark .section .topic .topicbtn {
+  background-color: var(--gray-800);
+  border-bottom-color: var(--gray-700);
+}
+html.dark .section .forum a,
+html.dark .section .forum .topicbtn a,
+html.dark .section .topic a,
+html.dark .section .topic .topicbtn a {
+  filter: grayscale(30%);
+}
+html.dark .section .topic .title a,
+html.dark .section .forum .title a {
+  color: var(--gray-200);
+}
+html.dark .section .topic .author a,
+html.dark .section .topic .author .mods,
+html.dark .section .forum .author a,
+html.dark .section .forum .author .mods,
+html.dark .section .topic .lastpost .lasttime a,
+html.dark .section .forum .lastpost .lasttime a {
+  color: var(--gray-500);
+}
+html.dark .section .topic .pages a,
+html.dark .section .forum .pages a {
+  background-color: var(--gray-700);
+  border-color: var(--gray-600);
+  color: var(--gray-400);
+}
+
+/* Topics */
+html.dark .section .post {
+  background-color: var(--gray-800);
+  border-left-color: var(--gray-600);
+}
+html.dark .section .post:hover {
+  border-left-color: var(--orange-400);
+}
+html.dark .section .post .profile {
+  background-color: var(--gray-700);
+  border-right-color: var(--gray-800);
+}
+html.dark .section .post .profile .author {
+  color: var(--green-200);
+}
+html.dark .section .post .profile .avatar.online {
+  border-bottom-color: var(--green-500);
+}
+html.dark .section .post .content {
+  border-left-color: var(--gray-800);
+}
+html.dark .section .post .content::before {
+  background-image: none;
+  width: 0;
+  height: 0;
+  border-width: 0 20px 20px 0;
+  border-style: inset solid solid inset;
+  border-color: transparent var(--gray-800) transparent transparent;
+}
+html.dark .spoiler input {
+  background-color: var(--green-600);
+  border-color: var(--green-600);
+  color: white;
+}
+html.dark .spoiler .spoilertext {
+  border-color: var(--green-600);
+}
+html.dark .section .post .content .message a.mention {
+  color: var(--green-200);
+}
+html.dark .section .post .profile .buttons a {
+  background-color: var(--green-600);
+}
+html.dark .section .post .profile .buttons a:hover {
+  background-color: var(--orange-600);
+}
+html.dark .content .actions .buttons a {
+  background-color: var(--gray-600);
+}
+html.dark .content .actions .buttons a:hover {
+  background-color: var(--orange-400);
+}
+html.dark .ban-notice {
+  background-color: var(--orange-400);
+}
+
+/* User zone */
+html.dark .panel-primary > .panel-heading {
+  background-color: var(--gray-700);
+  border-color: var(--gray-700);
+}
+html.dark .panel .panel-heading::after {
+  border-right-color: var(--gray-700);
+}
+html.dark .panel-body,
+html.dark .panel .panel-body.colored,
+html.dark .panel .panel-body .tab-content .panel .panel-body {
+  background-color: var(--gray-800);
+}
+html.dark .nav > li > a {
+  background-color: var(--gray-700);
+  color: var(--gray-300);
+}
+html.dark .nav > li.active > a {
+  background-color: var(--gray-500);
+  color: var(--gray-100);
+}
+html.dark .nav-tabs > li.active > a,
+html.dark .nav-tabs > li.active > a:hover,
+html.dark .nav-tabs > li.active > a:focus {
+  border-color: var(--gray-700);
+  border-bottom-color: transparent;
+}
+html.dark .nav-tabs {
+  border-bottom-color: var(--gray-500);
+}
+html.dark .nav-tabs > li {
+  margin-bottom: 0;
+}
+html.dark .tab-content {
+  background-color: var(--gray-900);
+  border-color: var(--gray-500);
+}
+html.dark .help-block {
+  color: var(--gray-500);
+}
+
+/* Wiki content */
+html.dark #wiki-bar {
+  background-color: var(--gray-700);
+}
+
+/* Ads */
+.anno {
+  background-color: var(--gray-800);
+}
+
+/* Compact mode */
+html.dark .menubar {
+  background-color: var(--gray-800);
+  color: var(--gray-200);
+}
+html.dark .menubar .main {
+  color: var(--gray-400);
+}
+html.dark .menubar .main > li > a,
+html.dark .menubar .main .main-popup a {
+  color: var(--gray-200);
+}
+html.dark .menubar .main > li:hover {
+  border-bottom: 3px solid var(--gray-400);
+}
+html.dark .menubar .main > li.open {
+  border-bottom: 3px solid var(--gray-200);
+}
+html.dark .menubar .main .main-popup {
+  background-color: var(--gray-600);
+}
+html.dark .navbar--profile .popup {
+  background-color: var(--gray-600);
+}
+html.dark .navbar--profile .popup a {
+  color: var(--gray-200);
+}
+html.dark .navbar--profile .popup a:hover {
+  color: var(--orange-400);
+}
+html.dark .navbar--profile .popup a::before {
+  filter: brightness(70%);
+}

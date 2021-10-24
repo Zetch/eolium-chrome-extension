@@ -3,6 +3,7 @@
 browser.storage.local
   .get({
     eolium_header_compactMode: false,
+    eolium_style_darkMode: false,
     eolium_other_hideRelatedWikis: false,
     eolium_other_hideGlobalAnnouces: false,
     eolium_other_hideRules: false,
@@ -61,7 +62,8 @@ browser.storage.local
           align: 'ltr',
           links: [
             ['General', '/foro_multiplataforma-playstation-5_229'],
-            ['Juegos', '/foro_playstation-5-juegos_234']
+            ['Juegos', '/foro_playstation-5-juegos_234'],
+            ['Online', '/foro_playstation-5-online_236']
           ]
         },
         xsx: {
@@ -69,7 +71,8 @@ browser.storage.local
           align: 'ltr',
           links: [
             ['General', '/foro_multiplataforma-xbox-series-x_230'],
-            ['Juegos', '/foro_xbox-series-juegos_232']
+            ['Juegos', '/foro_xbox-series-juegos_232'],
+            ['Online', '/foro_xbox-series-online_235']
           ]
         },
         switch: {
@@ -539,6 +542,9 @@ browser.storage.local
           document.querySelector('.menubar .main-popup').appendChild(li)
         })()
       })()
+    }
+    if (preferences.eolium_style_darkMode) {
+      document.documentElement.classList.add('dark')
     }
 
     // Hide related wikis

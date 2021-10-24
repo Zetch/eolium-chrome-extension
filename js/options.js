@@ -4,6 +4,7 @@ browser.storage.local
   .get({
     // Design
     eolium_header_compactMode: false,
+    eolium_style_darkMode: false,
     // Forums
     eolium_forums_hideFilter: '',
     eolium_forums_hideRead: false,
